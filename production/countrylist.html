@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo3.png" type="image/ico" />
+
+  <title>Plaas</title>
+
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+  <!-- bootstrap-progressbar -->
+  <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+  <!-- bootstrap-daterangepicker -->
+  <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+               <img src="images/logo3.png" style=" width: 100%;margin-top: 1.3rem;" alt="..." />
+            </div>
+            <div class="profile_info">
+              <span>Decenterlized Farms</span>
+              <span style="color:white">Management System</span>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>PROOF OF LIMITED EXTINCTION</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="index.html">Dashboard</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-globe"></i> Continents <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="Contlist.html">Continents List </a></li>
+                    <li><a href="addcont.html">Add Continents </a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-ioxhost"></i> Countries <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="countrylist.html">Country List</a></li>
+                    <li><a href="addcountry.html">Add Country</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-pagelines"></i> Crops <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="cropveglist.html"> Crops&Vegetables List</a></li>
+                    <li><a href="addcropveg.html">Add Crops&Vegetables</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-map-marker"></i> Farm & Locations<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="farmlist.html">Farm List</a></li>
+                    <li><a href="addfarm.html">Add Farm</a></li>
+                    <li><a href="scoutlocation.html">Scout Location</a></li>
+                    <li><a href="myscout.html">My Scouts</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-codepen"></i>LiveStock <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="listlivestock.html">Livestock List</a></li>
+                    <li><a href="addlivestock.html">Add Livestock</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-truck"></i>Products<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="livestocklist.html">LiveStock</a></li>
+                    <li><a href="crops.html">Crops</a></li>
+
+
+
+
+                  </ul>
+                </li>
+                <!-- <li><a><i class="fa fa-money"></i>Sales & Marketing <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="salesanal.html">Sales Analytics</a></li>
+                    <li><a href="marketing.html">Marketing Campaigns</a></li>
+                  </ul>
+                </li> -->
+                <li><a><i class="fa fa-ge"></i>Soil Types <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="soiltypes.html">Soil List</a></li>
+                    <li><a href="addsoil.html">Add Soil</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-book"></i>Suppliers<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="supplierlist.html">Supplier List</a></li>
+                    <li><a href="addsupplier.html">Add Supplier</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+            <div class="menu_section">
+              <h3>LIVE NEWS AND UPDATES</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-arrows"></i> Plaas Market <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="e_commerce.html">E-commerce</a></li>
+                    <li><a href="alllisting.html">All Listings</a></li>
+                    <li><a href="bidingandoffer.html">Bidding and Offers </a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-shopping-cart"></i> My Store <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="invenmanag.html">Inventory Management</a></li>
+                    <li><a href="walletmanag.html">Wallet Management</a></li>
+
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-copy"></i> Report & Printouts <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="finanreport.html">Financial Reports</a>
+                    <li><a href="invenreport.html">Inventory Reports</a>
+                    <li><a href="orderreceipt.html">Order Receipts</a>
+                    <li><a href="invoice.html">Payment Receipts</a>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+          <!-- /sidebar menu -->
+
+          <!-- /menu footer buttons -->
+
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+          </div>
+
+        </div>
+        <div id="wallet-address" style="float: right; margin-right: 10px;"></div>
+      </div>
+      <!-- /top navigation -->
+
+      <!-- page content -->
+      <div id="countryListContainer"></div>
+
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+            <div class="title_left">
+              <h3>Countries</h3>
+            </div>
+
+            <div class="title_right">
+              <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <div class="row">
+            <div class="x_panel">
+              <div class="x_content">
+                <div class="col-md-12 col-sm-12  text-center">
+                  <ul class="pagination pagination-split">
+                    <li><a href="#">A</a></li>
+                    <li><a href="#">B</a></li>
+                    <li><a href="#">C</a></li>
+                    <li><a href="#">D</a></li>
+                    <li><a href="#">E</a></li>
+                    <li>...</li>
+                    <li><a href="#">W</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">Y</a></li>
+                    <li><a href="#">Z</a></li>
+                  </ul>
+                </div>
+
+                <div id="countryList">
+                  <h2>Countries</h2>
+                  <ul id="countryItems"></ul>
+              </div>
+
+                  <style>
+                    /* Add your custom CSS styles here */
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                    }
+                    .profile_details {
+                        margin-bottom: 20px;
+                    }
+                    .profile_view {
+                        background-color: #f9f9f9;
+                        padding: 10px;
+                    }
+                    .brief {
+                        margin-top: 0;
+                    }
+                    ul.list-unstyled li {
+                        list-style-type: none;
+                        padding-left: 0;
+                    }
+                    button {
+                        margin-left: 10px;
+                    }
+                </style>
+            </head>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+        <div id="editCountryModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeCountryModal()">&times;</span>
+            <form id="editCountryForm">
+              <label for="countryName">Name:</label>
+              <input type="text" id="countryName"><br>
+              <label for="countryPopulation">Population:</label>
+              <input type="text" id="countryPopulation"><br>
+              <label for="countryArea">Area:</label>
+              <input type="text" id="countryArea"><br>
+              <label for="countryLanguage">Language:</label>
+              <input type="text" id="countryLanguage"><br>
+              <label for="countryCurrency">Currency:</label>
+              <input type="text" id="countryCurrency"><br>
+              <label for="countryContinent">Continent:</label>
+              <input type="text" id="countryContinent"><br>
+              <label for="countryCallCode">Call Code:</label>
+              <input type="text" id="countryCallCode"><br>
+              <label for="countryImage">Image URL:</label>
+              <input type="text" id="countryImage"><br>
+              <button type="button" onclick="saveEditedCountry()">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <style>
+        /* Add the provided CSS for the modal */
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+          padding-top: 60px;
+        }
+    
+        .modal-content {
+          background-color: white;
+          margin: 5% auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+          width: 50%;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          text-align: left;
+        }
+    
+        .close {
+          color: #aaa;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 28px;
+          font-weight: bold;
+        }
+    
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+    
+        #editCountryForm button {
+          background: linear-gradient(#e3982b, #8a5200bf), #b7791f63;
+          color: white;
+          border: none;
+          padding: 10px 30px;
+          margin: 20px auto 0;
+          font-size: 18px;
+          border-radius: 10px;
+          cursor: pointer;
+          display: block;
+        }
+    
+        #editCountryForm label {
+          display: block;
+          font-weight: bold;
+        }
+    
+        #editCountryForm input {
+          width: calc(100% - 20px);
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+        }
+      </style>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+    <script>
+      // Function to display the connected wallet address
+      function displayConnectedWallet() {
+        const connectedWallet = localStorage.getItem('connectedWallet');
+        if (connectedWallet) {
+          // Update a DOM element with the wallet address
+          document.getElementById('wallet-address').textContent = connectedWallet;
+        }
+      }
+  
+      // Call the displayConnectedWallet function on page load
+      window.addEventListener('load', displayConnectedWallet);
+  
+    </script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script>
+        // Initialize your contract instance here
+        const contractAddress = '0x9fc8589DED629744e24e39e663BE2B19994e68fB'; // Replace with your contract's address
+        const contractAbi =[
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "_name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_population",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_area",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_language",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_currency",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_continent",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_callCode",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_imageHash",
+              "type": "string"
+            }
+          ],
+          "name": "addCountry",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "population",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "area",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "language",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "currency",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "continent",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "callCode",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "imageHash",
+              "type": "string"
+            }
+          ],
+          "name": "CountryAdded",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            }
+          ],
+          "name": "CountryDeleted",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "population",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "area",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "language",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "currency",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "continent",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "callCode",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "imageHash",
+              "type": "string"
+            }
+          ],
+          "name": "CountryUpdated",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_index",
+              "type": "uint256"
+            }
+          ],
+          "name": "deleteCountry",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "_name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_population",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_area",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_language",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_currency",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_continent",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_callCode",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_imageHash",
+              "type": "string"
+            }
+          ],
+          "name": "editCountryDetails",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "name": "countries",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "population",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "area",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "language",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "currency",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "continent",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "callCode",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "imageHash",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "countryCount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_index",
+              "type": "uint256"
+            }
+          ],
+          "name": "getCountry",
+          "outputs": [
+            {
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "population",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "area",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "language",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "currency",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "continent",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "callCode",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "imageHash",
+                  "type": "string"
+                }
+              ],
+              "internalType": "struct CountrySystem.Country",
+              "name": "",
+              "type": "tuple"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ];
+
+        const web3 = new Web3(Web3.givenProvider);
+        const contractInstance = new web3.eth.Contract(contractAbi, contractAddress);
+
+        let selectedCountryIndex = -1;
+
+        async function loadCountries() {
+            const countryItems = document.getElementById('countryItems');
+            countryItems.innerHTML = '';
+
+            try {
+                const countryCount = await contractInstance.methods.countryCount().call();
+                let currentRow;
+
+                for (let i = 0; i < countryCount; i++) {
+                    if (i % 3 === 0) {
+                        // Start a new row for every three countries
+                        currentRow = document.createElement('div');
+                        currentRow.className = 'row';
+                    }
+
+                    const country = await contractInstance.methods.countries(i).call();
+
+                    // Create a container for each country with a unique identifier
+                    const countryDiv = document.createElement('div');
+                    countryDiv.className = 'col-md-4 col-sm-4 profile_details';
+                    countryDiv.setAttribute('data-index', i); // Add a data attribute for the index
+
+                    // Create the inner structure to match your design
+                    countryDiv.innerHTML = `
+                        <div class="well profile_view">
+                            <div class="col-sm-12">
+                                <h4 class="brief"><i class="fa fa-flag"></i>${country.name}</h4>
+                                <div class="left col-sm-7">
+                                    <p><strong>Name: </strong>${country.name}</p>
+                                    <p><strong>Population: </strong>${country.population}</p>
+                                    <p><strong>Area: </strong>${country.area}</p>
+                                    <p><strong>Language: </strong>${country.language}</p>
+                                    <p><strong>Currency: </strong>${country.currency}</p>
+                                    <p><strong>Continent: </strong>${country.continent}</p>
+                                    <p><strong>Call Code: </strong>${country.callCode}</p>
+                                </div>
+                                <div class="right col-sm-5 text-center">
+                                    <img src="${country.imageHash}" alt="${country.name}" class="img-fluid" style="height: 100px;">
+                                </div>
+                            </div>
+                            <div style="float: right;">
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="editCountry(${i})">
+                                    <i class="fa fa-edit"></i> Edit
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="deleteCountry(${i})">
+                                    <i class="fa fa-trash"></i> Delete
+                                </button>
+                            </div>
+                        </div>
+                    `;
+
+                    // Append the countryDiv to the current row
+                    currentRow.appendChild(countryDiv);
+
+                    // If it's the last country in the row or the last country overall, append the row to the countryItems
+                    if (i % 3 === 2 || i === countryCount - 1) {
+                        countryItems.appendChild(currentRow);
+                    }
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        // Function to edit a country
+        function editCountry(index) {
+          const countryIndex = parseInt(index); // Convert the index to a number
+          const country = document.querySelector(`[data-index="${countryIndex}"]`);
+    
+          if (country) {
+            const countryName = country.querySelector('strong:nth-child(1)').textContent.split('Name: ')[1];
+            const countryPopulation = country.querySelector('p:nth-child(2)').textContent.split('Population: ')[1];
+            const countryArea = country.querySelector('p:nth-child(3)').textContent.split('Area: ')[1];
+            const countryLanguage = country.querySelector('p:nth-child(4)').textContent.split('Language: ')[1];
+            const countryCurrency = country.querySelector('p:nth-child(5)').textContent.split('Currency: ')[1];
+            const countryContinent = country.querySelector('p:nth-child(6)').textContent.split('Continent: ')[1];
+            const countryCallCode = country.querySelector('p:nth-child(7)').textContent.split('Call Code: ')[1];
+            const countryImage = country.querySelector('img').src;
+    
+            // Set the values in the modal
+            document.getElementById('countryName').value = countryName;
+            document.getElementById('countryPopulation').value = countryPopulation;
+            document.getElementById('countryArea').value = countryArea;
+            document.getElementById('countryLanguage').value = countryLanguage;
+            document.getElementById('countryCurrency').value = countryCurrency;
+            document.getElementById('countryContinent').value = countryContinent;
+            document.getElementById('countryCallCode').value = countryCallCode;
+            document.getElementById('countryImage').value = countryImage;
+            selectedCountryIndex = countryIndex; // Set the selected country index
+            document.getElementById('editCountryModal').style.display = 'block'; // Show the modal
+          } else {
+            console.error("Country item not found.");
+          }
+        }
+    
+      
+        // Function to save edited country
+        async function saveEditedCountry() {
+            const name = document.getElementById('countryName').value;
+            const population = document.getElementById('countryPopulation').value;
+            const area = document.getElementById('countryArea').value;
+            const language = document.getElementById('countryLanguage').value;
+            const currency = document.getElementById('countryCurrency').value;
+            const continent = document.getElementById('countryContinent').value;
+            const callCode = document.getElementById('countryCallCode').value;
+            const image = document.getElementById('countryImage').value;
+
+            try {
+                const accounts = await web3.eth.getAccounts();
+                if (selectedCountryIndex !== -1) {
+                    // Edit existing country
+                    await contractInstance.methods.editCountryDetails(selectedCountryIndex, name, population, area, language, currency, continent, callCode, image).send({ from: accounts[0] });
+                    selectedCountryIndex = -1; // Reset the selected country index
+                    
+                    closeCountryModal()
+                    loadCountries();
+                }
+            } catch (error) {
+                console.error(error);
+            }
+            
+        }
+        function closeCountryModal() {
+          const modal = document.getElementById('editCountryModal');
+          modal.style.display = 'none';
+        }
+
+
+        // Function to delete a country
+        async function deleteCountry(index) {
+            try {
+                const accounts = await web3.eth.getAccounts();
+                if (accounts.length === 0) {
+                    console.error("MetaMask account not found.");
+                    return;
+                }
+
+                // Ensure that selectedCountryIndex is set to the correct value.
+                selectedCountryIndex = index;
+
+                if (selectedCountryIndex !== -1) {
+                    const result = await contractInstance.methods.deleteCountry(selectedCountryIndex).send({ from: accounts[0] });
+                    console.log("Delete transaction hash:", result.transactionHash);
+                    selectedCountryIndex = -1; // Reset the selected country index
+                    loadCountries();
+                }
+            } catch (error) {
+                console.error("Delete error:", error);
+            }
+        }
+
+        // Call the loadCountries function when the page loads
+        window.addEventListener('load', loadCountries);
+
+        // Attach event listeners
+        // Connect to your wallet or add any other relevant functionality here
+    </script>
+
+
+
+
+
+
+   
+</body>
+
+</html>

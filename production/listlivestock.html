@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo3.png" type="image/ico" />
+
+  <title>Plaas</title>
+
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+  <!-- bootstrap-progressbar -->
+  <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+  <!-- bootstrap-daterangepicker -->
+  <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+               <img src="images/logo3.png" style=" width: 100%;margin-top: 1.3rem;" alt="..." />
+            </div>
+            <div class="profile_info">
+              <span>Decenterlized Farms</span>
+              <span style="color:white">Management System</span>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>PROOF OF LIMITED EXTINCTION</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="index.html">Dashboard</a></li>
+                  
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-globe"></i> Continents <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="Contlist.html">Continents List </a></li>
+                    <li><a href="addcont.html">Add Continents </a></li>
+                   
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-ioxhost"></i> Countries <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="countrylist.html">Country List</a></li>
+                    <li><a href="addcountry.html">Add Country</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-pagelines"></i> Crops <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="cropveglist.html"> Crops&Vegetables List</a></li>
+                    <li><a href="addcropveg.html">Add Crops&Vegetables</a></li>
+                   
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-map-marker"></i> Farm & Locations<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="farmlist.html">Farm List</a></li>
+                    <li><a href="addfarm.html">Add Farm</a></li>
+                    <li><a href="scoutlocation.html">Scout Location</a></li>
+                    <li><a href="myscout.html">My Scouts</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-codepen"></i>LiveStock <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="listlivestock.html">Livestock List</a></li>
+                    <li><a href="addlivestock.html">Add Livestock</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-truck"></i>Products<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="livestocklist.html">LiveStock</a></li>
+                    <li><a href="crops.html">Crops</a></li>
+                   
+                    
+
+
+                  </ul>
+                </li>
+          
+                <li><a><i class="fa fa-ge"></i>Soil Types <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="soiltypes.html">Soil List</a></li>
+                    <li><a href="addsoil.html">Add Soil</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-book"></i>Suppliers<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="supplierlist.html">Supplier List</a></li>
+                    <li><a href="addsupplier.html">Add Supplier</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+            <div class="menu_section">
+              <h3>LIVE NEWS AND UPDATES</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-arrows"></i> Plaas Market <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="e_commerce.html">E-commerce</a></li>
+                    <li><a href="alllisting.html">All Listings</a></li>
+                    <li><a href="bidingandoffer.html">Bidding and Offers </a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-shopping-cart"></i> My Store <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="invenmanag.html">Inventory Management</a></li>
+                    <li><a href="walletmanag.html">Wallet Management</a></li>
+                  
+                    
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-copy"></i> Report & Printouts <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="finanreport.html">Financial Reports</a>
+                      <li><a href="invenreport.html">Inventory Reports</a>
+                        <li><a href="orderreceipt.html">Order Receipts</a>
+                          <li><a href="invoice.html">Payment Receipts</a>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+          <!-- /sidebar menu -->
+
+          <!-- /menu footer buttons -->
+
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+          </div>
+
+        </div>
+      </div>
+      <div id="wallet-address" style="float: right; margin-right: 10px;"></div>
+      <!-- /top navigation -->
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+
+
+
+          </div>
+
+          <div class="clearfix"></div>
+
+          <div class="row">
+            <div class="x_panel">
+              <div class="x_content">
+                <div class="col-md-12 col-sm-12  text-center">
+
+                </div>
+                <div id="livestockList">
+                  <h2>Livestocks</h2>
+                  <div class="row" id="livestockItems"></div>
+              </div>
+              <style>
+                /* Add the common styles for modals */
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    padding-top: 60px;
+                }
+              
+                /* Modal content */
+                .modal-content {
+                    background-color: white;
+                    margin: 5% auto;
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                    width: 50%;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    text-align: left;
+                }
+              
+                /* Close button */
+                .close {
+                    color: #aaa;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+              
+                .close:hover,
+                .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+              
+                /* Style for the Save Changes button */
+                #editLivestockForm button {
+                    background: linear-gradient(#e3982b, #8a5200bf), #b7791f63;
+                    color: white;
+                    border: none;
+                    padding: 10px 30px;
+                    margin: 20px auto 0;
+                    font-size: 18px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    display: block;
+                }
+              
+                /* Style for the form inputs */
+                #editLivestockForm label {
+                    display: block;
+                    font-weight: bold;
+                }
+              
+                #editLivestockForm input {
+                    width: calc(100% - 20px);
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                }
+              
+                /* Add common styles for the page */
+                .container {
+                    margin-top: 20px;
+                }
+              
+                h2 {
+                    color: #333;
+                }
+              
+                .profile_view {
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                }
+              
+                /* Add the rest of your specific styles if needed */
+              </style>
+              
+              <!-- Edit Livestock Form -->
+              <div id="editLivestockModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeLivestockModal()">&times;</span>
+                    <form id="editLivestockForm">
+                        <label>Color:</label>
+                        <input type="text" id="livestockColor"><br>
+                        <label>Maturity:</label>
+                        <input type="text" id="livestockMaturity"><br>
+                        <label>Category:</label>
+                        <input type="text" id="livestockCategory"><br>
+                        <label>Breed:</label>
+                        <input type="text" id="livestockBreed"><br>
+                        <label>Age:</label>
+                        <input type="text" id="livestockAge"><br>
+                        <label>Reference Info:</label>
+                        <input type="text" id="livestockRefInfo"><br>
+                        <label>Image Hash:</label>
+                        <input type="text" id="livestockImageHash"><br>
+                        <label>Birth Info:</label>
+                        <input type="text" id="livestockBirthInfo"><br>
+                        <button type="button" onclick="saveEditedLivestock()">Save Changes</button>
+                    </form>
+                </div>
+              </div>
+              <!-- Edit Livestock Form -->
+         
+      <!-- /page content -->
+
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="../vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- FastClick -->
+  <script src="../vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="../vendors/nprogress/nprogress.js"></script>
+
+  <!-- Custom Theme Scripts -->
+  <script src="../build/js/custom.min.js"></script>
+  <script>
+    // Function to display the connected wallet address
+  function displayConnectedWallet() {
+    const connectedWallet = localStorage.getItem('connectedWallet');
+    if (connectedWallet) {
+        // Update a DOM element with the wallet address
+        document.getElementById('wallet-address').textContent = connectedWallet;
+    }
+  }
+  
+  // Call the displayConnectedWallet function on page load
+  window.addEventListener('load', displayConnectedWallet);
+  
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script>
+      // Initialize your contract instance here
+      const contractAddress = '0xA75F066760806DF6Ece9678D71395d88365CdE59'; // Replace with your contract's address
+      const contractAbi = [
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "_color",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_maturity",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_category",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_breed",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_age",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_refInfo",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_imageHash",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_birthInfo",
+            "type": "string"
+          }
+        ],
+        "name": "addLivestock",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_livestockId",
+            "type": "uint256"
+          }
+        ],
+        "name": "deleteLivestock",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_livestockId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "_color",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_maturity",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_category",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_breed",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_age",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_refInfo",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_imageHash",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_birthInfo",
+            "type": "string"
+          }
+        ],
+        "name": "editLivestock",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "livestockId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "maturity",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "category",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "breed",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "age",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "refInfo",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "imageHash",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "birthInfo",
+            "type": "string"
+          }
+        ],
+        "name": "LiveStockAdded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "livestockId",
+            "type": "uint256"
+          }
+        ],
+        "name": "LiveStockDeleted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "livestockId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "maturity",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "category",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "breed",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "age",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "refInfo",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "imageHash",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "birthInfo",
+            "type": "string"
+          }
+        ],
+        "name": "LiveStockUpdated",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "getLivestocks",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "livestockId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "color",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "maturity",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "category",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "breed",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "age",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "refInfo",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "imageHash",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "birthInfo",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct LivestockSystem.LiveStock[]",
+            "name": "",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "livestock",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "livestockId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "maturity",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "category",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "breed",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "age",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "refInfo",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "imageHash",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "birthInfo",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "livestockCount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ]
+
+      const web3 = new Web3(Web3.givenProvider);
+      const contractInstance = new web3.eth.Contract(contractAbi, contractAddress);
+
+      let selectedLivestockIndex = -1;
+
+      async function loadLivestocks() {
+          const livestockItems = document.getElementById('livestockItems');
+          livestockItems.innerHTML = '';
+
+          try {
+              const livestockCount = await contractInstance.methods.livestockCount().call();
+              let currentRow;
+
+              for (let i = 0; i < livestockCount; i++) {
+                  if (i % 3 === 0) {
+                      // Start a new row for every three livestock items
+                      currentRow = document.createElement('div');
+                      currentRow.className = 'row';
+                  }
+
+                  const livestock = await contractInstance.methods.livestock(i).call();
+
+                  // Create a container for each livestock
+                  const livestockDiv = document.createElement('div');
+                  livestockDiv.className = 'col-md-4 col-sm-4 profile_details';
+                  livestockDiv.setAttribute('data-index', i); // Add a data attribute for the index
+
+                  // Create the inner structure to match your design
+                  livestockDiv.innerHTML = `
+                      <div class="well profile_view">
+                          <div class="col-sm-12">
+                              <h4 class="brief"><i class="fa fa-paw"></i>Livestock ID: ${livestock.livestockId}</h4>
+                              <div class="left col-sm-7">
+                                  <p><strong>Color: </strong>${livestock.color}</p>
+                                  <p><strong>Maturity: </strong>${livestock.maturity}</p>
+                                  <p><strong>Category: </strong>${livestock.category}</p>
+                                  <p><strong>Breed: </strong>${livestock.breed}</p>
+                                  <p><strong>Age: </strong>${livestock.age}</p>
+                                  <p><strong>Reference Info: </strong>${livestock.refInfo}</p>
+                                  <p><strong>Birth Info: </strong>${livestock.birthInfo}</p>
+                              </div>
+                              <div class="right col-sm-5 text-center">
+                                  <img src="${livestock.imageHash}" alt="Livestock" class="img-fluid" style="height: 100px;">
+                              </div>
+                          </div>
+                          <div style="float: right;">
+                              <button type="button" class="btn btn-secondary btn-sm" onclick="editLivestock(${i})">
+                                  <i class="fa fa-edit"></i> Edit
+                              </button>
+                              <button type="button" class="btn btn-danger btn-sm" onclick="deleteLivestock(${i})">
+                                  <i class="fa fa-trash"></i> Delete
+                              </button>
+                          </div>
+                      </div>
+                  `;
+
+                  // Append the livestockDiv to the current row
+                  currentRow.appendChild(livestockDiv);
+
+                  // If it's the last livestock item in the row or the last livestock item overall, append the row to livestockItems
+                  if (i % 3 === 2 || i === livestockCount - 1) {
+                      livestockItems.appendChild(currentRow);
+                  }
+              }
+          } catch (error) {
+              console.error(error);
+          }
+      }
+
+      // Function to edit a livestock
+      function editLivestock(index) {
+        const livestockIndex = parseInt(index); // Convert the index to a number
+        const livestock = document.querySelector(`[data-index="${livestockIndex}"]`);
+  
+        if (livestock) {
+            const livestockInfo = livestock.querySelector('.left').innerText.split('\n');
+            const livestockColor = livestockInfo[1].trim().replace('Color:', '');
+            const livestockMaturity = livestockInfo[2].trim().replace('Maturity:', '');
+            const livestockCategory = livestockInfo[3].trim().replace('Category:', '');
+            const livestockBreed = livestockInfo[4].trim().replace('Breed:', '');
+            const livestockAge = livestockInfo[5].trim().replace('Age:', '');
+            const livestockRefInfo = livestockInfo[6].trim().replace('Reference Info:', '');
+            const livestockImageHash = livestock.querySelector('img').src;
+            const livestockBirthInfo = livestockInfo[8].trim().replace('Birth Info:', '');
+  
+            document.getElementById('livestockColor').value = livestockColor;
+            document.getElementById('livestockMaturity').value = livestockMaturity;
+            document.getElementById('livestockCategory').value = livestockCategory;
+            document.getElementById('livestockBreed').value = livestockBreed;
+            document.getElementById('livestockAge').value = livestockAge;
+            document.getElementById('livestockRefInfo').value = livestockRefInfo;
+            document.getElementById('livestockImageHash').value = livestockImageHash;
+            document.getElementById('livestockBirthInfo').value = livestockBirthInfo;
+  
+            selectedLivestockIndex = livestockIndex; // Set the selected livestock index
+            document.getElementById('editLivestockModal').style.display = 'block'; // Show the edit form
+        } else {
+            console.error("Livestock item not found.");
+        }
+    }
+function closeLivestockModal() {
+  document.getElementById('editLivestockModal').style.display = 'none';
+  selectedLivestockIndex = -1; // Reset the selected livestock index
+}
+      // Function to save edited livestock
+      async function saveEditedLivestock() {
+        const color = document.getElementById('livestockColor').value;
+        const maturity = document.getElementById('livestockMaturity').value;
+        const category = document.getElementById('livestockCategory').value;
+        const breed = document.getElementById('livestockBreed').value;
+        const age = document.getElementById('livestockAge').value;
+        const refInfo = document.getElementById('livestockRefInfo').value;
+        const imageHash = document.getElementById('livestockImageHash').value;
+        const birthInfo = document.getElementById('livestockBirthInfo').value;
+  
+        try {
+            const accounts = await web3.eth.getAccounts();
+            if (selectedLivestockIndex !== -1) {
+                // Edit existing livestock
+                await contractInstance.methods.editLivestock(selectedLivestockIndex, color, maturity, category, breed, age, refInfo, imageHash, birthInfo).send({ from: accounts[0] });
+                selectedLivestockIndex = -1; // Reset the selected livestock index
+                document.getElementById('editLivestockModal').style.display = 'none'; // Hide the edit form
+                closeLivestockModal();
+                loadLivestocks();
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+      // Function to delete a livestock
+      async function deleteLivestock(index) {
+          try {
+              const accounts = await web3.eth.getAccounts();
+              if (accounts.length === 0) {
+                  console.error("MetaMask account not found.");
+                  return;
+              }
+
+              // Ensure that selectedLivestockIndex is set to the correct value.
+              selectedLivestockIndex = index;
+
+              if (selectedLivestockIndex !== -1) {
+                  const result = await contractInstance.methods.deleteLivestock(selectedLivestockIndex).send({ from: accounts[0] });
+                  console.log("Delete transaction hash:", result.transactionHash);
+                  selectedLivestockIndex = -1; // Reset the selected livestock index
+                  loadLivestocks();
+              }
+          } catch (error) {
+              console.error("Delete error:", error);
+          }
+      }
+
+      // Call the loadLivestocks function when the page loads
+      window.addEventListener('load', loadLivestocks);
+  </script>
+</body>
+</html>

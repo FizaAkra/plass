@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo3.png" type="image/ico" />
+
+    <title>Plaas</title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        background: url('https://cdn.pixabay.com/photo/2023/07/28/10/17/machinery-8154964_1280.jpg') no-repeat center center fixed;
+        background-size: cover;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .login-box {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .login-box h1 {
+        margin-bottom: 20px;
+    }
+
+    .connect-wallet {
+        background: linear-gradient(to right, #cc9d1c, #b9aa29);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .connect-wallet:hover {
+        background: linear-gradient(to right, #665920, #f0d041);
+    }
+</style>
+<body>
+    <div class="login-box">
+        <h1>Login with MetaMask</h1>
+        <button class="btn btn-primary connect-wallet" onclick="connectWallet()">Connect Wallet</button>
+    </div>
+<!-- JavaScript to Connect Wallet -->
+<script>
+    // Function to connect the MetaMask wallet
+    async function connectWallet() {
+        try {
+            // Check if MetaMask is installed
+            if (window.ethereum) {
+                // Request account access from the user
+                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+
+                // Check if an account was obtained (wallet connected)
+                if (accounts.length > 0) {
+                    // Store the connected wallet address in local storage
+                    localStorage.setItem('connectedWallet', accounts[0]);
+
+                    // Redirect to the index page
+                    window.location.href = 'index.html';
+
+                    // Display a message indicating that the wallet is connected
+                    alert('Wallet connected successfully!');
+                } else {
+                    alert('Wallet connection cancelled.');
+                }
+            } else {
+                alert('MetaMask is not installed. Please install and try again.');
+            }
+        } catch (error) {
+            console.error('Error connecting wallet:', error);
+            alert('Error connecting wallet. Please try again.');
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo3.png" type="image/ico" />
+
+  <title>Plaas</title>
+
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+  <!-- bootstrap-progressbar -->
+  <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+  <!-- bootstrap-daterangepicker -->
+  <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+               <img src="images/logo3.png" style=" width: 100%;margin-top: 1.3rem;" alt="..." />
+            </div>
+            <div class="profile_info">
+              <span>Decenterlized Scouts</span>
+              <span style="color:white">Management System</span>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>PROOF OF LIMITED EXTINCTION</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="index.html">Dashboard</a></li>
+
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-globe"></i> Continents <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="Contlist.html">Continents List </a></li>
+                    <li><a href="addcont.html">Add Continents </a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-ioxhost"></i> Countries <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="countrylist.html">Country List</a></li>
+                    <li><a href="addcountry.html">Add Country</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-pagelines"></i> Crops <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="cropveglist.html"> Crops&Vegetables List</a></li>
+                    <li><a href="addcropveg.html">Add Crops&Vegetables</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-map-marker"></i> Scout & Locations<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="farmlist.html">Scout List</a></li>
+                    <li><a href="addfarm.html">Add Scout</a></li>
+                    <li><a href="scoutlocation.html">Scout Location</a></li>
+                    <li><a href="myscout.html">My Scouts</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-codepen"></i>LiveStock <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="listlivestock.html">Livestock List</a></li>
+                    <li><a href="addlivestock.html">Add Livestock</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-truck"></i>Products<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="livestocklist.html">LiveStock</a></li>
+                    <li><a href="crops.html">Crops</a></li>
+
+
+
+
+                  </ul>
+                </li>
+
+                <li><a><i class="fa fa-ge"></i>Soil Types <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="soiltypes.html">Soil List</a></li>
+                    <li><a href="addsoil.html">Add Soil</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-book"></i>Suppliers<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="supplierlist.html">Supplier List</a></li>
+                    <li><a href="addsupplier.html">Add Supplier</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+            <div class="menu_section">
+              <h3>LIVE NEWS AND UPDATES</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-arrows"></i> Plaas Market <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="e_commerce.html">E-commerce</a></li>
+                    <li><a href="alllisting.html">All Listings</a></li>
+                    <li><a href="bidingandoffer.html">Bidding and Offers </a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-shopping-cart"></i> My Store <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="invenmanag.html">Inventory Management</a></li>
+                    <li><a href="walletmanag.html">Wallet Management</a></li>
+
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-copy"></i> Report & Printouts <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="finanreport.html">Financial Reports</a>
+                    <li><a href="invenreport.html">Inventory Reports</a>
+                    <li><a href="orderreceipt.html">Order Receipts</a>
+                    <li><a href="invoice.html">Payment Receipts</a>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+          <!-- /sidebar menu -->
+
+          <!-- /menu footer buttons -->
+
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+          </div>
+
+        </div>
+      </div>
+      <div id="wallet-address" style="float: right; margin-right: 10px;"></div>
+      <!-- /top navigation -->
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="x_content">
+            <div class="col-md-12 col-sm-12  text-center">
+
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div id="scoutList">
+              <h2>Scout Locations</h2>
+              <ul id="scoutItems"></ul>
+            </div>
+
+
+
+
+            <!-- Edit Continent Form -->
+            <!-- Add this div for the modal -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <form id="editScoutForm">
+                  <label>Location Name:</label>
+                  <input type="text" id="editScoutLocationName" name="locationName"><br>
+                  <label>Latitude:</label>
+                  <input type="text" id="editScoutLatitude" name="latitude"><br>
+                  <label>Longitude:</label>
+                  <input type="text" id="editScoutLongitude" name="longitude"><br>
+                  <label>Description:</label>
+                  <input type="text" id="editScoutDescription"><br>
+                  <label>Image URL:</label>
+                  <input type="text" id="editScoutImage"><br>
+                  <button type="button" onclick="saveEditedScout()">Save Changes</button>
+                </form>
+              </div>
+            </div>
+
+            <style>
+              /* Style for the modal */
+              .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+                padding-top: 60px;
+              }
+
+              /* Modal content */
+              .modal-content {
+                background-color: white;
+                margin: 5% auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                width: 50%;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: left;
+                /* Align content to the left */
+              }
+
+              /* Close button */
+              .close {
+                color: #aaa;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 28px;
+                font-weight: bold;
+              }
+
+              .close:hover,
+              .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+              }
+
+              /* Style for the Save Changes button */
+              #editScoutForm button {
+                background: linear-gradient(#e3982b, #8a5200bf), #b7791f63;
+
+                color: white;
+                border: none;
+                padding: 10px 30px;
+                margin: 20px auto 0;
+                /* Adjust margin to center horizontally and add space from the inputs */
+                font-size: 18px;
+                border-radius: 10px;
+                cursor: pointer;
+                display: block;
+                /* Ensure it takes full width */
+              }
+
+              /* Style for the form inputs */
+              #editScoutForm label {
+                display: block;
+                font-weight: bold;
+              }
+
+              #editScoutForm input {
+                width: calc(100% - 20px);
+                /* Adjust the width of the inputs */
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+              }
+            </style>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /page content -->
+
+
+  </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="../vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- FastClick -->
+  <script src="../vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="../vendors/nprogress/nprogress.js"></script>
+
+  <!-- Custom Theme Scripts -->
+  <script src="../build/js/custom.min.js"></script>
+  <script>
+    // Function to display the connected wallet address
+    function displayConnectedWallet() {
+      const connectedWallet = localStorage.getItem('connectedWallet');
+      if (connectedWallet) {
+        // Update a DOM element with the wallet address
+        document.getElementById('wallet-address').textContent = connectedWallet;
+      }
+    }
+
+    // Call the displayConnectedWallet function on page load
+    window.addEventListener('load', displayConnectedWallet);
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script>
+    const contractAddress = '0x9f1543aF6fD47B97bFfdE3985864fedC04C0DDfA'; // Replace with your contract's address
+    const contractAbi = [
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "_locationName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_latitude",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_longitude",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_imageHash",
+            "type": "string"
+          }
+        ],
+        "name": "addScoutLocation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_index",
+            "type": "uint256"
+          }
+        ],
+        "name": "deleteScoutLocation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_index",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "_locationName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_latitude",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_longitude",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_imageHash",
+            "type": "string"
+          }
+        ],
+        "name": "editScoutLocationDetails",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "locationName",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "latitude",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "longitude",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "imageHash",
+            "type": "string"
+          }
+        ],
+        "name": "ScoutLocationAdded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "ScoutLocationDeleted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "locationName",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "latitude",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "longitude",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "imageHash",
+            "type": "string"
+          }
+        ],
+        "name": "ScoutLocationUpdated",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "getScoutLocations",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "locationName",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "latitude",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "longitude",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "imageHash",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct ScoutSystem.ScoutLocation[]",
+            "name": "",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "scoutLocationCount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "scoutLocations",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "locationName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "latitude",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "longitude",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "imageHash",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ];
+    const web3 = new Web3(Web3.givenProvider);
+    const contractInstance = new web3.eth.Contract(contractAbi, contractAddress);
+
+    let selectedScoutIndex = -1;
+
+    async function loadScouts() {
+      const scoutItems = document.getElementById('scoutItems');
+      scoutItems.innerHTML = '';
+
+      try {
+        const scoutLocations = await contractInstance.methods.getScoutLocations().call();
+        scoutLocations.forEach((scout, index) => {
+          displayScout(scout, index, scoutItems);
+        });
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    function displayScout(scout, index, parentElement) {
+      const scoutDiv = document.createElement('div');
+      scoutDiv.className = 'col-md-4 col-sm-4 profile_details';
+      scoutDiv.setAttribute('data-index', index);
+
+      scoutDiv.innerHTML = `
+        <div class="well profile_view">
+            <div class="col-sm-12">
+                <h6 class="brief"><i class="fa fa-map-marker"></i>${scout.locationName}</h6>
+                <div class="left col-sm-7">
+                    <p><strong>Location Name: </strong>${scout.locationName}</p>
+                    <ul class="list-unstyled">
+                        <li><strong>Latitude: </strong>${scout.latitude}</li>
+                        <li><strong>Longitude: </strong>${scout.longitude}</li>
+                        <li><strong>Description: </strong>${scout.description}</li>
+                    </ul>
+                </div>
+                <div class="right col-sm-5 text-center">
+                    <img src="${scout.imageHash}" alt="${scout.locationName}" class="img-fluid" style="height: 100px;">
+                </div>
+            </div>
+            <div style="float: right;">
+                <button type="button" class="btn btn-secondary btn-sm" onclick="editScout(${index})">
+                    <i class="fa fa-edit"></i> Edit
+                </button>
+                <button type="button" class="btn btn-danger btn-sm" onclick="deleteScout(${index})">
+                    <i class="fa fa-trash"></i> Delete
+                </button>
+            </div>
+        </div>
+      `;
+
+      parentElement.appendChild(scoutDiv);
+    }
+    function editScout(index) {
+      const scoutIndex = parseInt(index);
+      const scout = document.querySelector(`[data-index="${scoutIndex}"]`);
+
+      if (scout) {
+        const locationName = scout.querySelector('h6.brief').innerText;
+        const latitude = scout.querySelector('ul.list-unstyled li:nth-child(1)').textContent.split('Latitude: ')[1];
+        const longitude = scout.querySelector('ul.list-unstyled li:nth-child(2)').textContent.split('Longitude: ')[1];
+        const description = scout.querySelector('ul.list-unstyled li:nth-child(3)').textContent.split('Description: ')[1];
+        const scoutImage = scout.querySelector('img').src;
+
+        document.getElementById('editScoutLocationName').value = locationName;
+        document.getElementById('editScoutLatitude').value = latitude;
+        document.getElementById('editScoutLongitude').value = longitude;
+        document.getElementById('editScoutDescription').value = description;
+        document.getElementById('editScoutImage').value = scoutImage;
+        selectedScoutIndex = scoutIndex;
+        document.getElementById('myModal').style.display = 'block';
+      } else {
+        console.error("Scout item not found.");
+      }
+    }
+
+    async function saveEditedScout() {
+      const locationName = document.getElementById('editScoutLocationName').value;
+      const latitude = document.getElementById('editScoutLatitude').value;
+      const longitude = document.getElementById('editScoutLongitude').value;
+      const description = document.getElementById('editScoutDescription').value;
+      const image = document.getElementById('editScoutImage').value;
+
+      try {
+        const accounts = await web3.eth.getAccounts();
+        if (selectedScoutIndex !== -1) {
+          await contractInstance.methods.editScoutLocationDetails(selectedScoutIndex, locationName, latitude, longitude, description, image).send({ from: accounts[0] });
+          selectedScoutIndex = -1;
+          document.getElementById('myModal').style.display = 'none';
+          loadScouts();
+        }
+      } catch (error) {
+        console.error("Error saving edited scout:", error);
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+
+    async function connectWallet() {
+      try {
+        // Request account access
+        await ethereum.request({ method: 'eth_requestAccounts' });
+      } catch (error) {
+        console.error("Error connecting to wallet:", error);
+      }
+    }
+
+
+    async function deleteScout(index) {
+      try {
+        const accounts = await web3.eth.getAccounts();
+        if (accounts.length === 0) {
+          console.error("MetaMask account not found.");
+          return;
+        }
+
+        selectedScoutIndex = index;
+
+        if (selectedScoutIndex !== -1) {
+          const result = await contractInstance.methods.deleteScoutLocation(selectedScoutIndex).send({ from: accounts[0] });
+          console.log("Delete transaction hash:", result.transactionHash);
+          selectedScoutIndex = -1;
+          loadScouts();
+        }
+      } catch (error) {
+        console.error("Delete error:", error);
+      }
+    }
+    window.addEventListener('load', loadScouts);
+  </script>
+</body>
+
+</html>

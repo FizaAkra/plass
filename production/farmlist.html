@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo3.png" type="image/ico" />
+
+  <title>Plaas</title>
+
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+  <!-- bootstrap-progressbar -->
+  <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+  <!-- bootstrap-daterangepicker -->
+  <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+               <img src="images/logo3.png" style=" width: 100%;margin-top: 1.3rem;" alt="..." />
+            </div>
+            <div class="profile_info">
+              <span>Decenterlized Farms</span>
+              <span style="color:white">Management System</span>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>PROOF OF LIMITED EXTINCTION</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="index.html">Dashboard</a></li>
+                   
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-globe"></i> Continents <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="Contlist.html">Continents List </a></li>
+                    <li><a href="addcont.html">Add Continents </a></li>
+                   
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-ioxhost"></i> Countries <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="countrylist.html">Country List</a></li>
+                    <li><a href="addcountry.html">Add Country</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-pagelines"></i> Crops  <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="cropveglist.html"> Crops&Vegetables List</a></li>
+                    <li><a href="addcropveg.html">Add Crops&Vegetables</a></li>
+                   
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-map-marker"></i> Farm & Locations<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="farmlist.html">Farm List</a></li>
+                    <li><a href="addfarm.html">Add Farm</a></li>
+                    <li><a href="scoutlocation.html">Scout Location</a></li>
+                    <li><a href="myscout.html">My Scouts</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-codepen"></i>LiveStock <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="listlivestock.html">Livestock List</a></li>
+                    <li><a href="addlivestock.html">Add Livestock</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-truck"></i>Products<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="livestocklist.html">LiveStock</a></li>
+                    <li><a href="crops.html">Crops</a></li>
+                   
+                    
+
+
+                  </ul>
+                </li>
+             
+                <li><a><i class="fa fa-ge"></i>Soil Types <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="soiltypes.html">Soil List</a></li>
+                    <li><a href="addsoil.html">Add Soil</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-book"></i>Suppliers<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="supplierlist.html">Supplier List</a></li>
+                    <li><a href="addsupplier.html">Add Supplier</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+            <div class="menu_section">
+              <h3>LIVE NEWS AND UPDATES</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-arrows"></i> Plaas Market <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="e_commerce.html">E-commerce</a></li>
+                    <li><a href="alllisting.html">All Listings</a></li>
+                    <li><a href="bidingandoffer.html">Bidding and Offers </a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-shopping-cart"></i> My Store <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="invenmanag.html">Inventory Management</a></li>
+                    <li><a href="walletmanag.html">Wallet Management</a></li>
+                
+                    
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-copy"></i> Report & Printouts <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="finanreport.html">Financial Reports</a>
+                      <li><a href="invenreport.html">Inventory Reports</a>
+                        <li><a href="orderreceipt.html">Order Receipts</a>
+                          <li><a href="invoice.html">Payment Receipts</a>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+          <!-- /sidebar menu -->
+
+          <!-- /menu footer buttons -->
+
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+          </div>
+
+        </div>
+      </div>
+      <div id="wallet-address" style="float: right; margin-right: 10px;"></div>
+      <!-- /top navigation -->
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+
+
+
+          </div>
+
+          <div class="container">
+            <div id="farmList">
+                <h2>Farms</h2>
+                <ul id="farmItems"></ul>
+            </div>
+    
+            <!-- Edit Farm Form -->
+            <div id="editFarmModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeFarmModal()">&times;</span>
+                  <form id="editFarmForm">
+                      <label>Farm Name:</label>
+                      <input type="text" id="editFarmName"><br>
+                      <label>Location:</label>
+                      <input type="text" id="editLocation"><br>
+                      <label>Village:</label>
+                      <input type="text" id="editVillage"><br>
+                      <label>Country:</label>
+                      <input type="text" id="editCountry"><br>
+                      <label>Farm Reference:</label>
+                      <input type="text" id="editFarmReference"><br>
+                      <label>Area:</label>
+                      <input type="text" id="editArea"><br>
+                      <label>Image URL:</label>
+                      <input type="text" id="editFarmImage"><br>
+                      <button type="button" onclick="saveEditedFarm()">Save Changes</button>
+                  </form>
+              </div>
+              <style>
+                /* Style for the modal */
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    padding-top: 60px;
+                }
+                
+                /* Modal content */
+                .modal-content {
+                    background-color: white;
+                    margin: 5% auto;
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                    width: 50%;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    text-align: left; /* Align content to the left */
+                }
+                
+                /* Close button */
+                .close {
+                    color: #aaa;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+                
+                .close:hover,
+                .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                
+                /* Style for the Save Changes button */
+                #editFarmForm button {
+                    background: linear-gradient(#e3982b, #8a5200bf), #b7791f63;
+                    color: white;
+                    border: none;
+                    padding: 10px 30px;
+                    margin: 20px auto 0; /* Adjust margin to center horizontally and add space from the inputs */
+                    font-size: 18px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    display: block; /* Ensure it takes full width */
+                }
+                
+                /* Style for the form inputs */
+                #editFarmForm label {
+                    display: block;
+                    font-weight: bold;
+                }
+                
+                #editFarmForm input {
+                    width: calc(100% - 20px); /* Adjust the width of the inputs */
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                }
+                </style>
+                
+          </div>
+          
+        </div>
+          <div class="row">
+           
+              <div class="x_content">
+                <div class="col-md-12 col-sm-12  text-center">
+
+                </div>
+
+                <div class="clearfix"></div>
+
+
+           
+
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /page content -->
+
+
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="../vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- FastClick -->
+  <script src="../vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="../vendors/nprogress/nprogress.js"></script>
+
+  <!-- Custom Theme Scripts -->
+  <script src="../build/js/custom.min.js"></script>
+  <script>
+    // Function to display the connected wallet address
+  function displayConnectedWallet() {
+    const connectedWallet = localStorage.getItem('connectedWallet');
+    if (connectedWallet) {
+        // Update a DOM element with the wallet address
+        document.getElementById('wallet-address').textContent = connectedWallet;
+    }
+  }
+  
+  // Call the displayConnectedWallet function on page load
+  window.addEventListener('load', displayConnectedWallet);
+  
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script>
+        // Initialize your contract instance here
+        const contractAddress = '0x7B66C579EfF25378B2eEab702e3FBeCa4D8ad1B7'; // Replace with your contract's address
+        const contractAbi = [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "_farmName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_location",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_village",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_country",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_farmReference",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_area",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_imageHash",
+              "type": "string"
+            }
+          ],
+          "name": "addFarm",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_index",
+              "type": "uint256"
+            }
+          ],
+          "name": "deleteFarm",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "_farmName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_location",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_village",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_country",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_farmReference",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_area",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_imageHash",
+              "type": "string"
+            }
+          ],
+          "name": "editFarmDetails",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "farmName",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "village",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "country",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "farmReference",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "area",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "imageHash",
+              "type": "string"
+            }
+          ],
+          "name": "FarmAdded",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            }
+          ],
+          "name": "FarmDeleted",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "farmName",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "village",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "country",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "farmReference",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "area",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "imageHash",
+              "type": "string"
+            }
+          ],
+          "name": "FarmUpdated",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "farmCount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "name": "farms",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "farmName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "village",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "country",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "farmReference",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "area",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "imageHash",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_index",
+              "type": "uint256"
+            }
+          ],
+          "name": "getFarm",
+          "outputs": [
+            {
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "farmName",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "location",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "village",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "country",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "farmReference",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "area",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "imageHash",
+                  "type": "string"
+                }
+              ],
+              "internalType": "struct FarmSystem.Farm",
+              "name": "",
+              "type": "tuple"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+        const web3 = new Web3(Web3.givenProvider);
+        const contractInstance = new web3.eth.Contract(contractAbi, contractAddress);
+
+        let selectedFarmIndex = -1;
+
+        async function loadFarms() {
+            const farmItems = document.getElementById('farmItems');
+            farmItems.innerHTML = '';
+
+            try {
+                const farmCount = await contractInstance.methods.farmCount().call();
+                let currentRow;
+
+                for (let i = 0; i < farmCount; i++) {
+                    if (i % 3 === 0) {
+                        // Start a new row for every three farms
+                        currentRow = document.createElement('div');
+                        currentRow.className = 'row';
+                    }
+
+                    const farm = await contractInstance.methods.farms(i).call();
+
+                    // Create a container for each farm with a unique identifier
+                    const farmDiv = document.createElement('div');
+                    farmDiv.className = 'col-md-4 col-sm-4 profile_details';
+                    farmDiv.setAttribute('data-index', i); // Add a data attribute for the index
+
+                    // Create the inner structure to match your design
+                    farmDiv.innerHTML = `
+                        <div class="well profile_view">
+                            <div class="col-sm-12">
+                                <h6 class="brief"><i class="fa fa-map-marker"></i>${farm.farmName}</h6>
+                                <div class="left col-sm-7">
+                                    <p><strong>Farm Name: </strong>${farm.farmName}</p>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Location: </strong>${farm.location}</li>
+                                        <li><strong>Village: </strong>${farm.village}</li>
+                                        <li><strong>Country: </strong>${farm.country}</li>
+                                        <li><strong>Farm Reference: </strong>${farm.farmReference}</li>
+                                        <li><strong>Area: </strong>${farm.area}</li>
+                                    </ul>
+                                </div>
+                                <div class="right col-sm-5 text-center">
+                                    <img src="${farm.imageHash}" alt="${farm.farmName}" class="img-fluid" style="height: 100px;">
+                                </div>
+                            </div>
+                            <div style="float: right;">
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="editFarm(${i})">
+                                    <i class="fa fa-edit"></i> Edit
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="deleteFarm(${i})">
+                                    <i class="fa fa-trash"></i> Delete
+                                </button>
+                            </div>
+                        </div>
+                    `;
+
+                    // Append the farmDiv to the current row
+                    currentRow.appendChild(farmDiv);
+
+                    // If it's the last farm in the row or the last farm overall, append the row to the farmItems
+                    if (i % 3 === 2 || i === farmCount - 1) {
+                        farmItems.appendChild(currentRow);
+                    }
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        // Function to edit a farm
+        function editFarm(index) {
+          const farmIndex = parseInt(index);
+          const farm = document.querySelector(`[data-index="${farmIndex}"]`);
+      
+          if (farm) {
+              const farmName = farm.querySelector('h6.brief').innerText;
+              const location = farm.querySelector('ul.list-unstyled li:nth-child(1)').textContent.split('Location: ')[1];
+              const village = farm.querySelector('ul.list-unstyled li:nth-child(2)').textContent.split('Village: ')[1];
+              const country = farm.querySelector('ul.list-unstyled li:nth-child(3)').textContent.split('Country: ')[1];
+              const farmReference = farm.querySelector('ul.list-unstyled li:nth-child(4)').textContent.split('Farm Reference: ')[1];
+              const area = farm.querySelector('ul.list-unstyled li:nth-child(5)').textContent.split('Area: ')[1];
+              const farmImage = farm.querySelector('img').src;
+      
+              // Fill in the modal inputs
+              document.getElementById('editFarmName').value = farmName;
+              document.getElementById('editLocation').value = location;
+              document.getElementById('editVillage').value = village;
+              document.getElementById('editCountry').value = country;
+              document.getElementById('editFarmReference').value = farmReference;
+              document.getElementById('editArea').value = area;
+              document.getElementById('editFarmImage').value = farmImage;
+      
+              // Set the selected farm index
+              selectedFarmIndex = farmIndex;
+      
+              // Display the edit farm modal
+              document.getElementById('editFarmModal').style.display = 'block';
+          } else {
+              console.error("Farm item not found for index: ", farmIndex);
+          }
+      }
+      function closeFarmModal() {
+        // Function to close the modal
+        document.getElementById('editFarmModal').style.display = 'none';
+        selectedFarmIndex = -1; // Reset the selected farm index
+    }
+          
+      
+
+        // Function to save edited farm
+        async function saveEditedFarm() {
+            const name = document.getElementById('farmName').value;
+            const location = document.getElementById('location').value;
+            const village = document.getElementById('village').value;
+            const country = document.getElementById('country').value;
+            const farmReference = document.getElementById('farmReference').value;
+            const area = document.getElementById('area').value;
+            const image = document.getElementById('farmImage').value;
+
+            try {
+                const accounts = await web3.eth.getAccounts();
+                if (selectedFarmIndex !== -1) {
+                    // Edit existing farm
+                    await contractInstance.methods.editFarmDetails(selectedFarmIndex, name, location, village, country, farmReference, area, image).send({ from: accounts[0] });
+                    selectedFarmIndex = -1; // Reset the selected farm index
+                    document.getElementById('editFarmForm').style.display = 'none'; // Hide the edit form
+                    closeFarmModal();
+                    loadFarms();
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        // Function to delete a farm
+        async function deleteFarm(index) {
+            try {
+                const accounts = await web3.eth.getAccounts();
+                if (accounts.length === 0) {
+                    console.error("MetaMask account not found.");
+                    return;
+                }
+
+                // Ensure that selectedFarmIndex is set to the correct value.
+                selectedFarmIndex = index;
+
+                if (selectedFarmIndex !== -1) {
+                    const result = await contractInstance.methods.deleteFarm(selectedFarmIndex).send({ from: accounts[0] });
+                    console.log("Delete transaction hash:", result.transactionHash);
+                    selectedFarmIndex = -1; // Reset the selected farm index
+                    loadFarms();
+                }
+            } catch (error) {
+                console.error("Delete error:", error);
+            }
+        }
+
+        // Call the loadFarms function when the page loads
+        window.addEventListener('load', loadFarms);
+    </script>
+</body>
+
+</html>

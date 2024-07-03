@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Listings</title>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+
+  <!-- Placeholder for displaying crops -->
+  <div id="cropItems">
+    <h2>Crop Listings</h2>
+    <!-- Crop items will be displayed here -->
+  </div>
+
+  <!-- Placeholder for displaying farms -->
+  <div id="farmItems">
+    <h2>Farm Listings</h2>
+    <!-- Farm items will be displayed here -->
+  </div>
+
+  <!-- Placeholder for displaying livestock -->
+  <div id="livestockItems">
+    <h2>Livestock Listings</h2>
+    <!-- Livestock items will be displayed here -->
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.0/web3.min.js"></script>
+  <script>
+    // Replace with your actual contract addresses
+    const contractAddressCrop = '0xb1513451d82f5106861ba2a3Ccdf05C7990b5d9c';
+    const contractAddressFarm = '0x7B66C579EfF25378B2eEab702e3FBeCa4D8ad1B7';
+    const contractAddressLivestock = '0xA75F066760806DF6Ece9678D71395d88365CdE59';
+
+    // Replace with your actual contract ABIs
+    const cropAbi =  [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_productName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_category",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_imageHash",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_harvestDate",
+          "type": "string"
+        }
+      ],
+      "name": "addCrop",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "productName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "imageHash",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "harvestDate",
+          "type": "string"
+        }
+      ],
+      "name": "CropAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "CropDeleted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "productName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "imageHash",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "harvestDate",
+          "type": "string"
+        }
+      ],
+      "name": "CropUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "deleteCrop",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_productName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_category",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_imageHash",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_harvestDate",
+          "type": "string"
+        }
+      ],
+      "name": "editCropDetails",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cropCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "crops",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "productName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "imageHash",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "harvestDate",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getCrop",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "productName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "category",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "imageHash",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "harvestDate",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct CropSystem.Crop",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+    ];;
+    const farmAbi = [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_farmName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_location",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_village",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_country",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_farmReference",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_area",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_imageHash",
+          "type": "string"
+        }
+      ],
+      "name": "addFarm",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "deleteFarm",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_farmName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_location",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_village",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_country",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_farmReference",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_area",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_imageHash",
+          "type": "string"
+        }
+      ],
+      "name": "editFarmDetails",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "farmName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "location",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "village",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "farmReference",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "area",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "imageHash",
+          "type": "string"
+        }
+      ],
+      "name": "FarmAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "FarmDeleted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "farmName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "location",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "village",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "farmReference",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "area",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "imageHash",
+          "type": "string"
+        }
+      ],
+      "name": "FarmUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "farmCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "farms",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "farmName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "location",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "village",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "farmReference",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "area",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "imageHash",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFarm",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "farmName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "village",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "country",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "farmReference",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "area",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "imageHash",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct FarmSystem.Farm",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ];
+    const livestockAbi = [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_color",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_maturity",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_category",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_breed",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_age",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_refInfo",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_imageHash",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_birthInfo",
+          "type": "string"
+        }
+      ],
+      "name": "addLivestock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_livestockId",
+          "type": "uint256"
+        }
+      ],
+      "name": "deleteLivestock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_livestockId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_color",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_maturity",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_category",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_breed",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_age",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_refInfo",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_imageHash",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_birthInfo",
+          "type": "string"
+        }
+      ],
+      "name": "editLivestock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "livestockId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "color",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "maturity",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "breed",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "age",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "refInfo",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "imageHash",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "birthInfo",
+          "type": "string"
+        }
+      ],
+      "name": "LiveStockAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "livestockId",
+          "type": "uint256"
+        }
+      ],
+      "name": "LiveStockDeleted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "livestockId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "color",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "maturity",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "breed",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "age",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "refInfo",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "imageHash",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "birthInfo",
+          "type": "string"
+        }
+      ],
+      "name": "LiveStockUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "getLivestocks",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "livestockId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "maturity",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "category",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "breed",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "age",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "refInfo",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "imageHash",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "birthInfo",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct LivestockSystem.LiveStock[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "livestock",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "livestockId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "color",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "maturity",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "breed",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "age",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "refInfo",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "imageHash",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "birthInfo",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "livestockCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ];
+
+    const web3 = new Web3(Web3.givenProvider);
+
+    const contractCrop = new web3.eth.Contract(cropAbi, contractAddressCrop);
+    const contractFarm = new web3.eth.Contract(farmAbi, contractAddressFarm);
+    const contractLivestock = new web3.eth.Contract(livestockAbi, contractAddressLivestock);
+
+    // Function to load crop listings
+  
+// Function to load crop list
+async function loadCrops() {
+  const cropItems = document.getElementById('cropItems');
+  cropItems.innerHTML = '';
+
+  try {
+      const cropCount = await contractInstance.methods.cropCount().call();
+      let currentRow;
+
+      for (let i = 0; i < cropCount; i++) {
+          if (i % 3 === 0) {
+              // Start a new row for every three crops
+              currentRow = document.createElement('div');
+              currentRow.className = 'row';
+          }
+
+          const crop = await contractInstance.methods.crops(i).call();
+
+          // Create a container for each crop
+          const cropDiv = document.createElement('div');
+          cropDiv.className = 'col-md-4 col-sm-4 profile_details';
+          cropDiv.setAttribute('data-index', i);
+
+          // Create the inner structure to match your design
+          cropDiv.innerHTML = `
+          <div class="well profile_view">
+              <div class="col-sm-12">
+               <h4 class="brief">${crop.productName}</h4>
+                  <div class="left col-sm-7">
+                      <p><strong>Category: </strong>${crop.category}</p>
+                      <ul class="list-unstyled">
+                          <li><strong>Description: </strong>${crop.description}</li>
+                          <li><strong>Harvest Date:</strong> ${crop.harvestDate}</li>
+                      </ul>
+                  </div>
+                  <div class="right col-sm-5 text-center">
+                      <img src="${crop.imageHash}" alt="${crop.productName}" class="img-fluid" style="height: 100px;">
+                  </div>
+              </div>
+              <div style="float: right;">
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="editCrop(${i})">
+                      <i class="fa fa-edit"></i> Edit
+                  </button>
+                  <button type="button" class="btn btn-danger btn-sm" onclick="deleteCrop(${i})">
+                      <i class="fa fa-trash"></i> Delete
+                  </button>
+              </div>
+          </div>
+      `;
+      
+      // ...
+  
+
+          // Append the cropDiv to the current row
+          currentRow.appendChild(cropDiv);
+
+          // If it's the last crop in the row or the last crop overall, append the row to the cropItems
+          if (i % 3 === 2 || i === cropCount - 1) {
+              cropItems.appendChild(currentRow);
+          }
+      }
+  } catch (error) {
+      console.error(error);
+  }
+}
+
+
+    // Function to load farm listings
+    async function loadFarms() {
+      const farmItems = document.getElementById('farmItems');
+      farmItems.innerHTML = '';
+
+      try {
+          const farmCount = await contractInstance.methods.farmCount().call();
+          let currentRow;
+
+          for (let i = 0; i < farmCount; i++) {
+              if (i % 3 === 0) {
+                  // Start a new row for every three farms
+                  currentRow = document.createElement('div');
+                  currentRow.className = 'row';
+              }
+
+              const farm = await contractInstance.methods.farms(i).call();
+
+              // Create a container for each farm with a unique identifier
+              const farmDiv = document.createElement('div');
+              farmDiv.className = 'col-md-4 col-sm-4 profile_details';
+              farmDiv.setAttribute('data-index', i); // Add a data attribute for the index
+
+              // Create the inner structure to match your design
+              farmDiv.innerHTML = `
+                  <div class="well profile_view">
+                      <div class="col-sm-12">
+                          <h6 class="brief"><i class="fa fa-map-marker"></i>${farm.farmName}</h6>
+                          <div class="left col-sm-7">
+                              <p><strong>Farm Name: </strong>${farm.farmName}</p>
+                              <ul class="list-unstyled">
+                                  <li><strong>Location: </strong>${farm.location}</li>
+                                  <li><strong>Village: </strong>${farm.village}</li>
+                                  <li><strong>Country: </strong>${farm.country}</li>
+                                  <li><strong>Farm Reference: </strong>${farm.farmReference}</li>
+                                  <li><strong>Area: </strong>${farm.area}</li>
+                              </ul>
+                          </div>
+                          <div class="right col-sm-5 text-center">
+                              <img src="${farm.imageHash}" alt="${farm.farmName}" class="img-fluid" style="height: 100px;">
+                          </div>
+                      </div>
+                      <div style="float: right;">
+                          <button type="button" class="btn btn-secondary btn-sm" onclick="editFarm(${i})">
+                              <i class="fa fa-edit"></i> Edit
+                          </button>
+                          <button type="button" class="btn btn-danger btn-sm" onclick="deleteFarm(${i})">
+                              <i class="fa fa-trash"></i> Delete
+                          </button>
+                      </div>
+                  </div>
+              `;
+
+              // Append the farmDiv to the current row
+              currentRow.appendChild(farmDiv);
+
+              // If it's the last farm in the row or the last farm overall, append the row to the farmItems
+              if (i % 3 === 2 || i === farmCount - 1) {
+                  farmItems.appendChild(currentRow);
+              }
+          }
+      } catch (error) {
+          console.error(error);
+      }
+  }
+
+    // Function to load livestock listings
+    
+    async function loadLivestocks() {
+      const livestockItems = document.getElementById('livestockItems');
+      livestockItems.innerHTML = '';
+
+      try {
+          const livestockCount = await contractInstance.methods.livestockCount().call();
+          let currentRow;
+
+          for (let i = 0; i < livestockCount; i++) {
+              if (i % 3 === 0) {
+                  // Start a new row for every three livestock items
+                  currentRow = document.createElement('div');
+                  currentRow.className = 'row';
+              }
+
+              const livestock = await contractInstance.methods.livestock(i).call();
+
+              // Create a container for each livestock
+              const livestockDiv = document.createElement('div');
+              livestockDiv.className = 'col-md-4 col-sm-4 profile_details';
+              livestockDiv.setAttribute('data-index', i); // Add a data attribute for the index
+
+              // Create the inner structure to match your design
+              livestockDiv.innerHTML = `
+                  <div class="well profile_view">
+                      <div class="col-sm-12">
+                          <h4 class="brief"><i class="fa fa-paw"></i>Livestock ID: ${livestock.livestockId}</h4>
+                          <div class="left col-sm-7">
+                              <p><strong>Color: </strong>${livestock.color}</p>
+                              <p><strong>Maturity: </strong>${livestock.maturity}</p>
+                              <p><strong>Category: </strong>${livestock.category}</p>
+                              <p><strong>Breed: </strong>${livestock.breed}</p>
+                              <p><strong>Age: </strong>${livestock.age}</p>
+                              <p><strong>Reference Info: </strong>${livestock.refInfo}</p>
+                              <p><strong>Birth Info: </strong>${livestock.birthInfo}</p>
+                          </div>
+                          <div class="right col-sm-5 text-center">
+                              <img src="${livestock.imageHash}" alt="Livestock" class="img-fluid" style="height: 100px;">
+                          </div>
+                      </div>
+                      <div style="float: right;">
+                          <button type="button" class="btn btn-secondary btn-sm" onclick="editLivestock(${i})">
+                              <i class="fa fa-edit"></i> Edit
+                          </button>
+                          <button type="button" class="btn btn-danger btn-sm" onclick="deleteLivestock(${i})">
+                              <i class="fa fa-trash"></i> Delete
+                          </button>
+                      </div>
+                  </div>
+              `;
+
+              // Append the livestockDiv to the current row
+              currentRow.appendChild(livestockDiv);
+
+              // If it's the last livestock item in the row or the last livestock item overall, append the row to livestockItems
+              if (i % 3 === 2 || i === livestockCount - 1) {
+                  livestockItems.appendChild(currentRow);
+              }
+          }
+      } catch (error) {
+          console.error(error);
+      }
+  }
+
+
+    // Function to load all listings
+    async function loadAllListings() {
+      await loadCrops();
+      await loadFarms();
+      await loadLivestocks();
+    }
+
+    // Call the function to load all listings when the page loads
+    window.addEventListener('load', loadAllListings);
+  </script>
+</body>
+</html>

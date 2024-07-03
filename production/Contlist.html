@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo3.png" type="image/ico" />
+
+  <title>Plaas</title>
+
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+  <!-- bootstrap-progressbar -->
+  <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+  <!-- bootstrap-daterangepicker -->
+  <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+               <img src="images/logo3.png" style=" width: 100%;margin-top: 1.3rem;" alt="..." />
+            </div>
+            <div class="profile_info">
+              <span>Decenterlized Farms</span>
+              <span style="color:white">Management System</span>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>PROOF OF LIMITED EXTINCTION</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="index.html">Dashboard</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-globe"></i> Continents <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="Contlist.html">Continents List </a></li>
+                    <li><a href="addcont.html">Add Continents </a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-ioxhost"></i> Countries <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="countrylist.html">Country List</a></li>
+                    <li><a href="addcountry.html">Add Country</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-pagelines"></i> Crops <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="cropveglist.html"> Crops&Vegetables List</a></li>
+                    <li><a href="addcropveg.html">Add Crops&Vegetables</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-map-marker"></i> Farm & Locations<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="farmlist.html">Farm List</a></li>
+                    <li><a href="addfarm.html">Add Farm</a></li>
+                    <li><a href="scoutlocation.html">Scout Location</a></li>
+                    <li><a href="myscout.html">My Scouts</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-codepen"></i>LiveStock <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="listlivestock.html">Livestock List</a></li>
+                    <li><a href="addlivestock.html">Add Livestock</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-truck"></i>Products<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="livestocklist.html">LiveStock</a></li>
+                    <li><a href="crops.html">Crops</a></li>
+
+
+
+
+                  </ul>
+                </li>
+                <!-- <li><a><i class="fa fa-money"></i>Sales & Marketing <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="salesanal.html">Sales Analytics</a></li>
+                    <li><a href="marketing.html">Marketing Campaigns</a></li>
+                  </ul>
+                </li> -->
+                <li><a><i class="fa fa-ge"></i>Soil Types <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="soiltypes.html">Soil List</a></li>
+                    <li><a href="addsoil.html">Add Soil</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-book"></i>Suppliers<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="supplierlist.html">Supplier List</a></li>
+                    <li><a href="addsupplier.html">Add Supplier</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+            <div class="menu_section">
+              <h3>LIVE NEWS AND UPDATES</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-arrows"></i> Plaas Market <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="e_commerce.html">E-commerce</a></li>
+                    <li><a href="alllisting.html">All Listings</a></li>
+                    <li><a href="bidingandoffer.html">Bidding and Offers </a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-shopping-cart"></i> My Store <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="invenmanag.html">Inventory Management</a></li>
+                    <li><a href="walletmanag.html">Wallet Management</a></li>
+
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-copy"></i> Report & Printouts <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="finanreport.html">Financial Reports</a>
+                    <li><a href="invenreport.html">Inventory Reports</a>
+                    <li><a href="orderreceipt.html">Order Receipts</a>
+                    <li><a href="invoice.html">Payment Receipts</a>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+          <!-- /sidebar menu -->
+
+          <!-- /menu footer buttons -->
+
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+          </div>
+
+        </div>
+      </div>
+      <div id="wallet-address" style="float: right; margin-right: 10px;"></div>
+      <!-- /top navigation -->
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+            <div class="title_left">
+              <h3>Continents</h3>
+            </div>
+
+            <div class="title_right">
+              <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <div class="row">
+            <div class="x_panel">
+              <div class="x_content">
+                <div class="col-md-12 col-sm-12  text-center">
+                  <ul class="pagination pagination-split">
+                    <li><a href="#">A</a></li>
+                    <li><a href="#">B</a></li>
+                    <li><a href="#">C</a></li>
+                    <li><a href="#">D</a></li>
+                    <li><a href="#">E</a></li>
+                    <li>...</li>
+                    <li><a href="#">W</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">Y</a></li>
+                    <li><a href="#">Z</a></li>
+                  </ul>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div id="continentList">
+                  <h2>Continents</h2>
+                  <ul id="continentItems"></ul>
+                </div>
+
+
+
+
+                <!-- Edit Continent Form -->
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <form id="editContinentForm">
+                      <label for="editContinentName">Name:</label>
+                      <input type="text" id="editContinentName"><br>
+                      <label for="editContinentDescription">Description:</label>
+                      <input type="text" id="editContinentDescription"><br>
+                      <label for="editContinentImage">Image URL:</label>
+                      <input type="text" id="editContinentImage"><br>
+                      <button type="button" onclick="saveEditedContinent()">Save Changes</button>
+                    </form>
+                  </div>
+                </div>
+                <style>
+/* Style for the modal */
+/* Style for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align content to the left */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style for the Save Changes button */
+#editContinentForm button {
+  background: linear-gradient(#e3982b, #8a5200bf), #b7791f63;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  margin: 20px auto 0; /* Adjust margin to center horizontally and add space from the inputs */
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block; /* Ensure it takes full width */
+}
+
+
+/* Style for the form inputs */
+#editContinentForm label {
+  display: block;
+  font-weight: bold;
+}
+
+#editContinentForm input {
+  width: calc(100% - 20px); /* Adjust the width of the inputs */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+                </style>
+                
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+
+        <!-- Include web3.js and MetaMask Ethereum provider -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+    <script>
+      // Function to display the connected wallet address
+      function displayConnectedWallet() {
+        const connectedWallet = localStorage.getItem('connectedWallet');
+        if (connectedWallet) {
+          // Update a DOM element with the wallet address
+          document.getElementById('wallet-address').textContent = connectedWallet;
+        }
+      }
+
+      // Call the displayConnectedWallet function on page load
+      window.addEventListener('load', displayConnectedWallet);
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script>
+      // Initialize your contract instance here
+      const contractAddress = '0x66ae17d67d99db14e999e568a85d08AF442B3743'; // Replace with your contract's address
+      const contractAbi = [
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "_name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_imageHash",
+            "type": "string"
+          }
+        ],
+        "name": "addContinent",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "imageHash",
+            "type": "string"
+          }
+        ],
+        "name": "ContinentAdded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "ContinentDeleted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "imageHash",
+            "type": "string"
+          }
+        ],
+        "name": "ContinentUpdated",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_index",
+            "type": "uint256"
+          }
+        ],
+        "name": "deleteContinent",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_index",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "_name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_imageHash",
+            "type": "string"
+          }
+        ],
+        "name": "editContinent",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "continentCount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "continents",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "imageHash",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getContinents",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "imageHash",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct ContinentSystem.Continent[]",
+            "name": "",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ]
+
+      const web3 = new Web3(Web3.givenProvider);
+      const contractInstance = new web3.eth.Contract(contractAbi, contractAddress);
+
+      let selectedContinentIndex = -1;
+
+      async function loadContinents() {
+        const continentItems = document.getElementById('continentItems');
+        continentItems.innerHTML = '';
+
+        try {
+          const continentCount = await contractInstance.methods.continentCount().call();
+          let currentRow;
+
+          for (let i = 0; i < continentCount; i++) {
+            if (i % 3 === 0) {
+              // Start a new row for every three continents
+              currentRow = document.createElement('div');
+              currentRow.className = 'row';
+            }
+
+            const continent = await contractInstance.methods.continents(i).call();
+
+            // Create a container for each continent
+            // Create a container for each continent with a unique identifier
+            const continentDiv = document.createElement('div');
+            continentDiv.className = 'col-md-4 col-sm-4 profile_details';
+            continentDiv.setAttribute('data-index', i); // Add a data attribute for the index
+
+            // ... (rest of the code remains the same)
+
+
+            // Create the inner structure to match your design
+            continentDiv.innerHTML = `
+                      <div class="well profile_view">
+                          <div class="col-sm-12">
+                              <h4 class="brief"><i class="fa fa-map-marker"></i>${continent.name}</h4>
+                              <div class="left col-sm-7">
+                                  <p><strong>Continent: </strong>${continent.name}</p>
+                                  <ul class="list-unstyled">
+                                      <li>Description: ${continent.description}</li>
+                                  </ul>
+                              </div>
+                              <div class="right col-sm-5 text-center">
+                                  <img src="${continent.imageHash}" alt="${continent.name}" class="img-fluid" style="height: 100px;">
+                              </div>
+                          </div>
+                          <div style="float: right;">
+                            <button type="button" class="btn btn-secondary btn-sm" onclick="editContinent(${i})">
+                              <i class="fa fa-edit"></i> Edit
+                            </button>
+                            
+                              <button type="button" class="btn btn-danger btn-sm" onclick="deleteContinent(${i})">
+                                  <i class="fa fa-trash"></i> Delete
+                              </button>
+                          </div>
+                      </div>
+                  `;
+
+            // Append the continentDiv to the current row
+            currentRow.appendChild(continentDiv);
+
+            // If it's the last continent in the row or the last continent overall, append the row to the continentItems
+            if (i % 3 === 2 || i === continentCount - 1) {
+              continentItems.appendChild(currentRow);
+            }
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      // Function to edit a continent
+      function editContinent(index) {
+        const continentIndex = parseInt(index);
+        const continent = document.querySelector(`[data-index="${continentIndex}"]`);
+      
+        if (continent) {
+          const continentName = continent.querySelector('h4.brief').innerText;
+          const continentDescription = continent.querySelector('ul.list-unstyled li').textContent.split('Description: ')[1];
+          const continentImage = continent.querySelector('img').src;
+      
+          document.getElementById('editContinentName').value = continentName;
+          document.getElementById('editContinentDescription').value = continentDescription;
+          document.getElementById('editContinentImage').value = continentImage;
+          selectedContinentIndex = continentIndex;
+          document.getElementById('myModal').style.display = 'block';
+        } else {
+          console.error("Continent item not found.");
+        }
+      }
+      
+      async function saveEditedContinent() {
+        const name = document.getElementById('editContinentName').value;
+        const description = document.getElementById('editContinentDescription').value;
+        const image = document.getElementById('editContinentImage').value;
+      
+        try {
+          const accounts = await ethereum.request({ method: 'eth_accounts' });
+          if (selectedContinentIndex !== -1) {
+            await contractInstance.methods.editContinent(selectedContinentIndex, name, description, image).send({ from: accounts[0] });
+            selectedContinentIndex = -1;
+            closeModal();
+            loadContinents();
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      
+      function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+      }
+      
+      async function connectWallet() {
+        try {
+          // Request account access
+          await ethereum.request({ method: 'eth_requestAccounts' });
+        } catch (error) {
+          console.error("Error connecting to wallet:", error);
+        }
+      }
+
+      // Function to delete a continent
+      async function deleteContinent(index) {
+        try {
+          const accounts = await web3.eth.getAccounts();
+          if (accounts.length === 0) {
+            console.error("MetaMask account not found.");
+            return;
+          }
+
+          // Ensure that selectedContinentIndex is set to the correct value.
+          selectedContinentIndex = index;
+
+          if (selectedContinentIndex !== -1) {
+            const result = await contractInstance.methods.deleteContinent(selectedContinentIndex).send({ from: accounts[0] });
+            console.log("Delete transaction hash:", result.transactionHash);
+            selectedContinentIndex = -1; // Reset the selected continent index
+            loadContinents();
+          }
+        } catch (error) {
+          console.error("Delete error:", error);
+        }
+      }
+
+
+      // Call the loadContinents function when the page loads
+      window.addEventListener('load', loadContinents);
+
+
+
+      // Attach event listeners
+      connectWallet();
+    </script>
+</body>
+
+</html>

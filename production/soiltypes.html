@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo3.png" type="image/ico" />
+
+  <title>Plaas</title>
+
+  <!-- Bootstrap -->
+  <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  <!-- Datatables -->
+
+  <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+  <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+  <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+  <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+  <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+               <img src="images/logo3.png" style=" width: 100%;margin-top: 1.3rem;" alt="..." />
+            </div>
+            <div class="profile_info">
+              <span>Decenterlized Farms</span>
+              <span style="color:white">Management System</span>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>PROOF OF LIMITED EXTINCTION</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="index.html">Dashboard</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-globe"></i> Continents <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="Contlist.html">Continents List </a></li>
+                    <li><a href="addcont.html">Add Continents </a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-ioxhost"></i> Countries <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="countrylist.html">Country List</a></li>
+                    <li><a href="addcountry.html">Add Country</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-pagelines"></i> Crops <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="cropveglist.html"> Crops&Vegetables List</a></li>
+                    <li><a href="addcropveg.html">Add Crops&Vegetables</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-map-marker"></i> Farm & Locations<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="farmlist.html">Farm List</a></li>
+                    <li><a href="addfarm.html">Add Farm</a></li>
+                    <li><a href="scoutlocation.html">Scout Location</a></li>
+                    <li><a href="myscout.html">My Scouts</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-codepen"></i>LiveStock <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="listlivestock.html">Livestock List</a></li>
+                    <li><a href="addlivestock.html">Add Livestock</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-truck"></i>Products<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="livestocklist.html">LiveStock</a></li>
+                    <li><a href="crops.html">Crops</a></li>
+
+
+
+
+                  </ul>
+                </li>
+
+                <li><a><i class="fa fa-ge"></i>Soil Types <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="soiltypes.html">Soil List</a></li>
+                    <li><a href="addsoil.html">Add Soil</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-book"></i>Suppliers<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="supplierlist.html">Supplier List</a></li>
+                    <li><a href="addsupplier.html">Add Supplier</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+            <div class="menu_section">
+              <h3>LIVE NEWS AND UPDATES</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-arrows"></i> Plaas Market <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="e_commerce.html">E-commerce</a></li>
+                    <li><a href="alllisting.html">All Listings</a></li>
+                    <li><a href="bidingandoffer.html">Bidding and Offers </a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-shopping-cart"></i> My Store <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="invenmanag.html">Inventory Management</a></li>
+                    <li><a href="walletmanag.html">Wallet Management</a></li>
+
+
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-copy"></i> Report & Printouts <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="finanreport.html">Financial Reports</a>
+                    <li><a href="invenreport.html">Inventory Reports</a>
+                    <li><a href="orderreceipt.html">Order Receipts</a>
+                    <li><a href="invoice.html">Payment Receipts</a>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+          <!-- /sidebar menu -->
+
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- /top navigation -->
+
+      <!-- page content -->
+
+      <style>
+        .custom-container {
+          border: 1px solid #ddd;
+          /* Add border */
+          padding: 20px;
+          /* Add padding */
+          margin: 20px auto;
+          /* Center the container */
+        }
+
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        th,
+        td {
+          padding: 8px;
+          text-align: left;
+          border-top: 1px solid #ddd;
+          /* Add top border */
+        }
+
+        th {
+          font-weight: bold;
+        }
+
+        /* Apply styles to rows */
+        tbody tr {
+          border-bottom: 1px solid #ddd;
+          /* Add bottom border for rows */
+        }
+
+        .pagination li {
+          margin-right: 4px;
+          /* Adjust the value as needed */
+        }
+      </style>
+
+
+      <div class="right_col" role="main">
+        <div class="page-title">
+          <div class="title_left">
+            <h5>Farmer Products Buying / Selling Explorer</h5>
+          </div>
+        </div>
+        <br />
+        <div class="custom-container">
+          <div class="card-box table-responsive">
+            <div class="d-flex justify-content-between">
+              <h5><i class="fa fa-sort-amount-asc"> A total of 68137 events found</i></h5>
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#"
+                    style="background-color: rgb(113, 161, 198); color:white">First</a></li>
+                <li class="page-item"><a class="page-link" href="#"
+                    style="background-color: rgb(113, 161, 198); color:white">Previous</a></li>
+                <li class="page-item "><a class="page-link" href="#"
+                    style="background-color: rgb(137, 140, 142); color:white">Page 1 of 1363</a></li>
+                <li class="page-item"><a class="page-link" href="#" style="background-color:white; color:black">Next</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#" style="background-color:white; color:black">Last</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="x_content">
+            <div class="col-md-12 col-sm-12  text-center">
+
+            </div>
+
+            <div class="clearfix"></div>
+            <div id="scoutList">
+              <h2>Soil Information</h2>
+              <ul id="scoutItems"></ul>
+            </div>
+            <div id="wallet-address"></div>
+
+            <!-- Edit Soil Form -->
+            <!-- Add this div for the modal -->
+            <!-- Modal HTML -->
+            <!-- Add this div for the modal -->
+            <!-- Modal HTML -->
+            <div id="myModal" class="soil-modal">
+              <div class="soil-modal-content">
+                <form id="editSoilForm">
+                  <span class="soil-close" onclick="closeModal()">&times;</span>
+                  <label>PSL Hash:</label>
+                  <input type="text" id="editSoilPslHash" name="pslHash"><br>
+                  <label>Period:</label>
+                  <input type="text" id="editSoilPeriod" name="period"><br>
+                  <label>From:</label>
+                  <input type="text" id="editSoilFrom" name="from"><br>
+                  <label>To:</label>
+                  <input type="text" id="editSoilTo" name="to"><br>
+                  <label>Quantity:</label>
+                  <input type="text" id="editSoilQuantity" name="quantity"><br>
+                  <button type="button" onclick="saveEditedSoil()">Save Changes</button>
+                </form>
+              </div>
+            </div>
+
+            <style>
+              /* Style for the modal */
+              .soil-modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+                padding-top: 60px;
+              }
+
+              /* Modal content */
+              .soil-modal-content {
+                background-color: white;
+                margin: 5% auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                width: 50%;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: left;
+                /* Align content to the left */
+              }
+
+              /* Close button */
+              .soil-close {
+                color: #aaa;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 28px;
+                font-weight: bold;
+              }
+
+              .soil-close:hover,
+              .soil-close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+              }
+
+              /* Style for the Save Changes button */
+              #editSoilForm button {
+                background: linear-gradient(#e3982b, #8a5200bf), #b7791f63;
+
+                color: white;
+                border: none;
+                padding: 10px 30px;
+                margin: 20px auto 0;
+                /* Adjust margin to center horizontally and add space from the inputs */
+                font-size: 18px;
+                border-radius: 10px;
+                cursor: pointer;
+                display: block;
+                /* Ensure it takes full width */
+              }
+
+              /* Style for the form inputs */
+              #editSoilForm label {
+                display: block;
+                font-weight: bold;
+              }
+
+              #editSoilForm input {
+                width: calc(100% - 20px);
+                /* Adjust the width of the inputs */
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+              }
+            </style>
+
+
+
+
+
+          </div>
+          <div class="container mt-4">
+            <table id="customTable">
+              <thead>
+                <tr>
+                  <th>PSL Hash</th>
+                  <th>Period</th>
+                  <th>From</th>
+                  <th></th>
+                  <th>To</th>
+                  <th>Quantity</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Soil data will be dynamically inserted here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="../vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- FastClick -->
+  <script src="../vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="../vendors/nprogress/nprogress.js"></script>
+  <!-- iCheck -->
+  <script src="../vendors/iCheck/icheck.min.js"></script>
+
+  <!-- Custom Theme Scripts -->
+  <script src="../build/js/custom.min.js"></script>
+  <script>
+    // Function to display the connected wallet address
+    function displayConnectedWallet() {
+      const connectedWallet = localStorage.getItem('connectedWallet');
+      if (connectedWallet) {
+        // Update a DOM element with the wallet address
+        document.getElementById('wallet-address').textContent = connectedWallet;
+      }
+    }
+
+    // Call the displayConnectedWallet function on page load
+    window.addEventListener('load', displayConnectedWallet);
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+
+  <script>
+    const contractAbi = [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "pslHash",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "period",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "from",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "to",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "quantity",
+            "type": "string"
+          }
+        ],
+        "name": "SoilAdded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "SoilDeleted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "pslHash",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "period",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "from",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "to",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "quantity",
+            "type": "string"
+          }
+        ],
+        "name": "SoilUpdated",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "_pslHash",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_period",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_from",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_to",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_quantity",
+            "type": "string"
+          }
+        ],
+        "name": "addSoil",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_index",
+            "type": "uint256"
+          }
+        ],
+        "name": "deleteSoil",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_index",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "_pslHash",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_period",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_from",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_to",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_quantity",
+            "type": "string"
+          }
+        ],
+        "name": "editSoil",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getSoils",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "pslHash",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "period",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "from",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "to",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "quantity",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct SoilSystem.Soil[]",
+            "name": "",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "soilCount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "soils",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "pslHash",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "period",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "from",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "to",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "quantity",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ];
+
+
+
+
+    const contractAddress = '0x2a864f67c4EF98b22a4df6225ed02A7777cfaE4a'; // Replace with your contract's address
+    const web3 = new Web3(Web3.givenProvider);
+    const contractInstance = new web3.eth.Contract(contractAbi, contractAddress);
+
+    async function loadSoilData() {
+      const tableBody = document.querySelector('#customTable tbody');
+
+      if (!tableBody) {
+        console.error('Table body element not found.');
+        return;
+      }
+
+      tableBody.innerHTML = '';
+
+      try {
+        if (!contractInstance.methods.getSoils) {
+          throw new Error('getSoils function not found in the contract ABI.');
+        }
+
+        const soilData = await contractInstance.methods.getSoils().call();
+
+        soilData.forEach((data, index) => {
+          const row = tableBody.insertRow();
+
+          const pslHashCell = row.insertCell(0);
+          pslHashCell.textContent = data.pslHash;
+
+          const periodCell = row.insertCell(1);
+          periodCell.textContent = data.period;
+
+          const fromCell = row.insertCell(2);
+          fromCell.textContent = data.from;
+
+          const imageCell = row.insertCell(3);
+          imageCell.innerHTML = `<img src="../production/images/icon.png" style="height: 20px; width:20px">`;
+
+          const toCell = row.insertCell(4);
+          toCell.textContent = data.to;
+
+          const quantityCell = row.insertCell(5);
+          quantityCell.textContent = data.quantity;
+
+          const actionCell = row.insertCell(6);
+          function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+          }
+          // Inside your loop where you create rows and cells
+          const editButton = document.createElement('button');
+          editButton.classList.add('btn', 'btn-secondary', 'btn-sm');
+          editButton.innerHTML = `<i class="fa fa-edit"></i> Edit`;
+          editButton.addEventListener('click', () => editSoil(data, index));
+          actionCell.appendChild(editButton);
+
+          // Delete button
+          const deleteButton = document.createElement('button');
+          deleteButton.classList.add('btn', 'btn-danger', 'btn-sm');
+          deleteButton.innerHTML = `<i class="fa fa-trash"></i> Delete`;
+
+          // Capture the value of index using a closure
+          const capturedIndex = index;
+          deleteButton.addEventListener('click', function () {
+            deleteSoil(capturedIndex);
+          });
+
+          actionCell.appendChild(deleteButton);
+        });
+      } catch (error) {
+        console.error("Error loading soil data:", error);
+      }
+    }
+
+    function displayConnectedWallet() {
+      const connectedWallet = localStorage.getItem('connectedWallet');
+      const walletAddressElement = document.getElementById('wallet-address');
+
+      if (connectedWallet && walletAddressElement) {
+        walletAddressElement.textContent = connectedWallet;
+      }
+    }
+
+
+
+    // Function to close the modal
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+    let selectedSoilIndex = -1;
+
+    // Updated editSoil function
+    function editSoil(data, index) {
+      document.getElementById('editSoilPslHash').value = data.pslHash;
+      document.getElementById('editSoilPeriod').value = data.period;
+      document.getElementById('editSoilFrom').value = data.from;
+      document.getElementById('editSoilTo').value = data.to;
+      document.getElementById('editSoilQuantity').value = data.quantity;
+      selectedSoilIndex = index;
+      const modal = document.getElementById('myModal');
+      if (modal) {
+        modal.style.display = 'block';
+      } else {
+        console.error("Modal element not found.");
+      }
+    }
+
+    async function saveEditedSoil() {
+      const hash = document.getElementById('editSoilPslHash').value;
+      const period = document.getElementById('editSoilPeriod').value;
+      const from = document.getElementById('editSoilFrom').value;
+      const to = document.getElementById('editSoilTo').value;
+      const quantity = document.getElementById('editSoilQuantity').value;
+
+      try {
+        const accounts = await ethereum.request({ method: 'eth_accounts' });
+        if (selectedSoilIndex !== -1) {
+          await contractInstance.methods.editSoil(selectedSoilIndex, hash, period, from, to, quantity).send({ from: accounts[0] });
+          selectedSoilIndex = -1;
+          closeModal();
+          loadSoils();
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    function closeModal() {
+      const modal = document.getElementById('myModal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Function to close the modal
+    // Also make sure to call loadSoilData and displayConnectedWallet on window load:
+    window.addEventListener('load', async () => {
+      await loadSoilData();
+      displayConnectedWallet();
+    });
+
+    // Updated deleteSoil function to handle the click event
+    // Function to delete a soil
+    async function deleteSoil(index) {
+      try {
+        const accounts = await web3.eth.getAccounts();
+        if (accounts.length === 0) {
+          console.error("MetaMask account not found.");
+          return;
+        }
+
+        // Ensure that selectedSoilIndex is set to the correct value.
+        selectedSoilIndex = index;
+
+        if (selectedSoilIndex !== -1) {
+          const result = await contractInstance.methods.deleteSoil(selectedSoilIndex).send({ from: accounts[0] });
+          console.log("Delete transaction hash:", result.transactionHash);
+          selectedSoilIndex = -1; // Reset the selected soil index
+          loadSoils();
+        }
+      } catch (error) {
+        console.error("Delete error:", error);
+      }
+    }
+
+    // Function to close the modal
+
+
+
+
+  </script>
+</body>
+
+</html>
